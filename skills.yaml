@@ -1,0 +1,47 @@
+# The six skills (README, "The six skills"). Scale 1-15: skill level N = the skill of a typical person at standing
+# level N. A level counts only when its test is passed under its rules (partial credit: README, "How your rating is
+# scored"). Targets = the bar for MATS and Anthropic Fellows admits.
+retest_weeks: 8
+skills:
+  - id: coding
+    name: Coding fluency
+    target: 11
+    levels:
+      - {level: 7, test: "4-level progressive build, levels 1-3 passing in 90 minutes", where: tests/coding/task01-record-store/}
+      - {level: 9, test: "Fresh 4-level build, all 4 levels in 90 minutes (about 750/1000 CodeSignal-equivalent)"}
+      - {level: 11, test: "Fresh 4-level build, all 4 in 75 minutes, plus a live-coding mock graded pass"}
+  - id: ml_iteration
+    name: Empirical ML iteration
+    target: 11
+    levels:
+      - {level: 7, test: "Generation loop and sampling from a blank file, matched against model.generate, 60 minutes", where: tests/ml/drill01-generate-loop/}
+      - {level: 9, test: "ARENA 1.1 (GPT-2 from scratch) tests pass without solutions, under 6 hours"}
+      - {level: 11, test: "Reproduce a published small-model number within its error bars in under 2 working days"}
+  - id: toolcraft
+    name: Safety toolcraft
+    target: 10
+    levels:
+      - {level: 7, test: "ARENA 1.2 exercises pass their tests without solutions", where: tests/toolcraft/arena-1.2/}
+      - {level: 8, test: "Unaided in 3 hours: activation patching on IOI recovering the known heads, plus a linear probe with a shuffled-label control"}
+      - {level: 10, test: "An SAE matching a public baseline (SAEBench or SAELens), or one merged non-trivial PR in circuit-tracer, SAELens, TransformerLens, or inspect_evals"}
+  - id: rigor
+    name: Quantitative rigor
+    target: 10
+    levels:
+      - {level: 7, test: "Quiz, 12 questions, 45 minutes, 10 to pass", where: tests/rigor/quiz01/}
+      - {level: 8, test: "Per-item and clustered intervals plus a paired comparison on released eval logs, matching a reference analysis"}
+      - {level: 10, test: "A pre-registration that passes a methods review with no blocking findings"}
+  - id: judgment
+    name: Research judgment
+    target: 10
+    levels:
+      - {level: 7, test: "Foundations self-test, 22 written answers, 2 minutes each, 16 to pass", where: tests/judgment/selftest01/}
+      - {level: 8, test: "10-minute timed brainstorm on a random subfield; at least 3 ideas an auditor rates 3+ of 5 on novelty and feasibility"}
+      - {level: 10, test: "Two of your own ideas survive a cold audit and a kill test in one month"}
+  - id: communication
+    name: Communication
+    target: 10
+    levels:
+      - {level: 7, test: "600-word paper summary, 60 minutes, blind-graded", where: tests/communication/summary01/}
+      - {level: 8, test: "A graded mock research discussion"}
+      - {level: 10, test: "A public write-up rated clear, with a substantive response from someone in the field"}
